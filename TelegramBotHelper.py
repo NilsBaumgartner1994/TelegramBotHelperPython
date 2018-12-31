@@ -31,7 +31,7 @@ class TelegramBot:
     def saveSubscribers(self):
         with open(self.subscriberFile, 'w') as f:
             for subscriber in self.subscribers:
-                if subscriber != None and subscriber != "\n" and subscriber != $
+                if subscriber != None and subscriber != "\n" and subscriber != "":
                     f.write("%s\n" % subscriber)
 
     def loadSubscribers(self):
@@ -39,7 +39,7 @@ class TelegramBot:
         if exists:
             with open(self.subscriberFile, 'r') as f:
                 for subscriber in f:
-                    if subscriber != None and subscriber != "\n" and subscriber$
+                    if subscriber != None and subscriber != "\n" and subscriber != "":
                         self.subscribe(subscriber)
 
     def messageReceived(self,msg):
