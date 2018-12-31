@@ -12,7 +12,7 @@ class TelegramBot:
         self.commands.append([cmd,callback,helpText])
 
     def displayHelp(self,chat_id):
-        helpText = "Please use '/help command' to get more Information about a $
+        helpText = "Please use '/help command' to get more Information about a command"
         self.sendToChatID(chat_id,helpText)
 
     def getCommandTuple(self,cmd):
